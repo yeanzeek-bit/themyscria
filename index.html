@@ -3,79 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Themyscira Lipcare | Divine Feminine Rituals</title>
+  <title>Themyscira Lipcare | Luxury for the Modern Goddess</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* REFINED LUXURY PALETTE */
+      /* LUXURY PALETTE */
       --primary: #4A1230; /* Deep Royal Plum */
       --accent: #BFA466;  /* Muted Antique Gold */
       --bg: #F9F7F2;      /* Soft Bone / Off-white */
-      --text: #2E2532;    /* Deep Charcoal / Dark Plum */
+      --text: #2E2532;    /* Deep Charcoal */
       --white: #FFFFFF;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7; /* Increased for "breathable layouts" */
+      line-height: 1.8;
       font-weight: 300;
     }
 
-    /* TYPOGRAPHY UTILS */
+    /* TYPOGRAPHY */
     h1, h2, h3, .logo {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       color: var(--primary);
     }
+    
+    .italic-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: 18px;
+      margin-top: -10px;
+      margin-bottom: 30px;
+      display: block;
+    }
 
     /* HEADER */
     header {
-      background: var(--bg); /* Blends with body for minimalism */
-      border-bottom: 1px solid rgba(191, 164, 102, 0.3); /* Subtle gold line */
+      background: var(--bg);
+      border-bottom: 1px solid rgba(191, 164, 102, 0.3);
       padding: 30px 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       position: sticky;
       top: 0;
       z-index: 10;
     }
-
     @media (min-width: 768px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+      header { flex-direction: row; justify-content: space-between; }
     }
-
-    .logo-container { text-align: center; }
-    .logo { font-size: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
-    .tag { font-family: 'Poppins', sans-serif; font-size: 11px; color: #666; letter-spacing: 1px; margin-top: 4px; text-transform: uppercase;}
+    .logo { font-size: 26px; letter-spacing: 0.05em; text-transform: uppercase; }
 
     nav { margin-top: 15px; }
     @media (min-width: 768px) { nav { margin-top: 0; } }
-
     nav a {
       margin-left: 24px;
       text-decoration: none;
       color: var(--text);
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-      transition: color 0.3s ease;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
     }
     nav a:hover { color: var(--accent); }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
       padding: 100px 24px;
       max-width: 900px;
@@ -83,10 +83,9 @@
       text-align: center;
     }
     .hero h1 {
-      font-size: 42px;
+      font-size: 46px;
       line-height: 1.2;
       margin-bottom: 24px;
-      color: var(--primary);
     }
     .hero p {
       max-width: 680px;
@@ -94,11 +93,18 @@
       font-size: 16px;
       color: #555;
     }
-    
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent);
+      margin-top: 24px;
+      display: block;
+    }
+
     /* CTA BUTTON */
     .cta {
       display: inline-block;
-      padding: 14px 32px;
+      padding: 16px 36px;
       background: var(--primary);
       color: var(--white);
       text-decoration: none;
@@ -113,188 +119,197 @@
       color: var(--primary);
     }
 
-    /* SECTIONS & GRID */
-    .section {
-      max-width: 1024px;
-      margin: 64px auto;
-      padding: 0 24px;
-    }
+    /* SECTIONS */
+    .section { max-width: 1024px; margin: 80px auto; padding: 0 24px; }
     
     .section h2 {
-      font-size: 32px;
+      font-size: 36px;
       text-align: center;
-      margin-bottom: 48px;
-      position: relative;
-    }
-    /* Decorative underline for headers */
-    .section h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: var(--accent);
-      margin: 16px auto 0;
+      margin-bottom: 12px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px; /* Generous spacing */
+      gap: 32px;
+      margin-top: 48px;
     }
 
-    /* PRODUCT CARDS */
+    /* CARDS */
     .card {
       background: var(--white);
       border: 1px solid #EAEAEA;
-      padding: 32px;
+      padding: 40px 32px;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-    }
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: var(--primary);
-    }
-    .card p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 16px;
-    }
-
-    /* INGREDIENT PILLS - Simplified/Refined */
+    .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .card h3 { font-size: 24px; margin-bottom: 12px; }
+    .card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+    
     .pill {
-      display: inline-block;
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--accent);
       border: 1px solid var(--accent);
-      padding: 4px 12px;
-      margin: 4px;
+      padding: 6px 14px;
+      display: inline-block;
     }
 
-    /* BUNDLE SPECIFIC */
+    /* BUNDLE */
     .bundle {
-      background: #FDFBF7; /* Very subtle warm white */
+      background: #FDFBF7;
       border: 1px solid var(--accent);
       text-align: center;
-      padding: 40px;
+      padding: 60px 40px;
     }
     .bundle-list {
       list-style: none;
-      margin: 20px 0;
+      margin: 30px 0;
       font-family: 'Playfair Display', serif;
       color: var(--primary);
-      font-size: 18px;
+      font-size: 20px;
     }
-    .bundle-list li { padding: 4px 0; }
+    .bundle-list li { padding: 8px 0; border-bottom: 1px solid rgba(191,164,102,0.1); width: fit-content; margin: 0 auto;}
 
-    /* FOOTER */
+    /* PHILOSOPHY SECTION */
+    .philosophy {
+      text-align: center;
+      background: var(--white);
+      padding: 60px 20px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .philosophy-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .philosophy-list li {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      border-left: 2px solid var(--accent);
+      font-size: 15px;
+    }
+    .quote-large {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--primary);
+      margin-top: 40px;
+    }
+
+    /* CONTACT & FOOTER */
+    .contact { text-align: center; margin-top: 60px; }
     footer {
       margin-top: 80px;
       padding: 40px 24px;
-      background: var(--white);
+      background: var(--primary);
+      color: rgba(255,255,255,0.7);
       text-align: center;
-      border-top: 1px solid #eee;
     }
-    footer p {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #888;
-    }
+    footer p { font-size: 12px; letter-spacing: 1px; }
 
-    /* UTILITY */
-    .text-center { text-align: center; }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo-container">
-    <div class="logo">THEMYSCIRA LIPCARE</div>
-  </div>
+  <div class="logo">THEMYSCIRA LIPCARE</div>
   <nav>
-    <a href="#rituals">The Rituals</a>
-    <a href="#bundle">Sets</a>
-    <a href="#philosophy">Philosophy</a>
+    <a href="#products">Collection</a>
+    <a href="#about">Philosophy</a>
+    <a href="#bundle">The Ritual</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Ritual lipcare crafted for<br>divine feminine power</h1>
-  <p>Thoughtfully formulated lip rituals inspired by Amazonian strength — designed to nourish, protect, and elevate your natural beauty with intention.</p>
-  <a href="#rituals" class="cta">Explore The Amazonian Ritual</a>
+  <h1>Luxury lipcare crafted for<br>the modern goddess</h1>
+  <p>Inspired by Amazonian strength and feminine mystique, Themyscira Lipcare is designed for women who don’t just wear gloss — they command presence. Nourish, soften, and illuminate your lips with products made to be seen.</p>
+  
+  <a href="#products" class="cta">Explore The Collection</a>
+  
+  <span class="hero-sub">Where confidence meets softness.</span>
 </section>
 
-<section id="rituals" class="section">
-  <h2>The Collection</h2>
+<section id="products" class="section">
+  <div style="text-align: center;">
+    <h2>The Amazonian Collection</h2>
+    <span class="italic-sub">Discover your signature shade</span>
+  </div>
+
   <div class="grid">
-    
     <div class="card">
-      <h3>Artemis Mauve</h3>
-      <p>A high-shine, non-sticky gloss with a refined mauve tint that enhances the natural tone of your lips. Designed for softness, comfort, and subtle radiance.</p>
-      <div class="pill">Lip Gloss</div>
+      <span class="pill">Lip Gloss</span>
+      <h3 style="margin-top:16px;">Artemis Mauve</h3>
+      <p>Graceful, mysterious, endlessly feminine. A soft mauve gloss inspired by the precision of the huntress. Beauty with precision, elegance with edge.</p>
+      <small>Power: Romantic Confidence</small>
     </div>
 
     <div class="card">
-      <h3>Hippolyta Brown</h3>
-      <p>A rich, warm brown gloss with depth and elegance. Smooth, moisturizing, and designed to complement every complexion with quiet confidence.</p>
-      <div class="pill">Lip Gloss</div>
+      <span class="pill">Lip Gloss</span>
+      <h3 style="margin-top:16px;">Nubian Bronze</h3>
+      <p>Warm, deep, and magnetic. A rich brown gloss that embodies grounded power, golden undertones, and royal presence.</p>
+      <small>Power: Earth Energy & Elegance</small>
     </div>
 
     <div class="card">
-      <h3>Selene Balm</h3>
-      <p>A deeply hydrating lip balm formulated to soothe, protect, and restore dry lips. Ideal for daily wear or overnight repair.</p>
-      <div class="pill">Nourishing Balm</div>
+      <span class="pill">Daily Care</span>
+      <h3 style="margin-top:16px;">Goddess Silk Balm</h3>
+      <p>A rich, soothing balm that wraps your lips in moisture. Leaves lips feeling pillowy, feminine, and divine. Ideal as a base for gloss.</p>
+      <small>Effect: Deep Moisture</small>
     </div>
 
     <div class="card">
-      <h3>Eos Glow Scrub</h3>
-      <p>A gentle sugar-based exfoliator that buffs away dryness and reveals softer, smoother lips — preparing them for balm or gloss rituals.</p>
-      <div class="pill">Exfoliator</div>
+      <span class="pill">Exfoliator</span>
+      <h3 style="margin-top:16px;">Warrior Glow Scrub</h3>
+      <p>A gentle sugar-based exfoliator that buffs away dryness and reveals smoother, softer lips. Restores softness without losing strength.</p>
+      <small>Effect: Renew & Prep</small>
     </div>
-
   </div>
 </section>
 
 <section id="bundle" class="section">
-  <h2>The Amazonian Lip Ritual Set</h2>
   <div class="card bundle">
-    <p>A complete lipcare ritual designed for daily nourishment and effortless elegance.</p>
+    <h2>The Amazonian Lipcare Set</h2>
+    <p>A luxurious 3-step lipcare set designed to exfoliate, nourish, and shine — revealing lips that feel as powerful as the woman wearing them.</p>
+    
     <ul class="bundle-list">
-      <li>Artemis Mauve Lip Gloss</li>
-      <li>Hippolyta Brown Lip Gloss</li>
-      <li>Selene Balm</li>
-      <li>Eos Glow Scrub</li>
-      <li>Themyscira Mini Cosmetic Pouch</li>
+      <li>Warrior Glow Scrub</li>
+      <li>Goddess Silk Balm</li>
+      <li>High-shine Lip Gloss (Choice of Shade)</li>
     </ul>
+    
+    <p style="font-size:14px; margin-top:20px;">Perfect for daily use and goddess-level glow.</p>
     <br>
-    <a href="#contact" class="cta">Order Set</a>
+    <a href="#contact" class="cta">Claim Your Goddess Glow</a>
   </div>
 </section>
 
-<section id="philosophy" class="section text-center">
-  <h2>Ingredient Positioning</h2>
-  <p style="max-width: 700px; margin: auto;">
-    Skin-loving oils and butters. Thoughtfully selected pigments. Gentle fragrances. 
-    <br><br>
-    <strong>Paraben-free • Cruelty-free</strong>
-  </p>
+<section id="about" class="section philosophy">
+  <h2>Our Philosophy</h2>
+  <p>We design lipcare for women who enter rooms and change the temperature.</p>
+  
+  <ul class="philosophy-list">
+    <li>We believe beauty is strength and softness is not weakness.</li>
+    <li>We create for those who know their worth.</li>
+    <li>We embrace sensuality without apology.</li>
+    <li>We believe every woman has goddess energy within her.</li>
+  </ul>
+
+  <div class="quote-large">"You are the goddess.<br>Everything else adjusts."</div>
 </section>
 
-<section id="contact" class="section text-center">
-  <h2>Acquire</h2>
-  <p>DM on Instagram: <strong>@themyscira.lipcare</strong></p>
+<section id="contact" class="section contact">
+  <h2>Acquire The Collection</h2>
+  <p style="margin-bottom:8px;">DM on Instagram: <strong>@themyscira.lipcare</strong></p>
   <p>WhatsApp: <strong>+234 _________</strong></p>
 </section>
 
 <footer>
-  <p>© Themyscira Lipcare<br>Crafted with intention.</p>
+  <p>© Themyscira Lipcare | Crafted with intention.</p>
 </footer>
 
 </body>
