@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Themyscira Lipcare | Divine Feminine Rituals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* REFINED LUXURY PALETTE */
+      --primary: #4A1230; /* Deep Royal Plum */
+      --accent: #BFA466;  /* Muted Antique Gold */
+      --bg: #F9F7F2;      /* Soft Bone / Off-white */
+      --text: #2E2532;    /* Deep Charcoal / Dark Plum */
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7; /* Increased for "breathable layouts" */
+      font-weight: 300;
+    }
+
+    /* TYPOGRAPHY UTILS */
+    h1, h2, h3, .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg); /* Blends with body for minimalism */
+      border-bottom: 1px solid rgba(191, 164, 102, 0.3); /* Subtle gold line */
+      padding: 30px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .logo-container { text-align: center; }
+    .logo { font-size: 28px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .tag { font-family: 'Poppins', sans-serif; font-size: 11px; color: #666; letter-spacing: 1px; margin-top: 4px; text-transform: uppercase;}
+
+    nav { margin-top: 15px; }
+    @media (min-width: 768px) { nav { margin-top: 0; } }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 100px 24px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-size: 16px;
+      color: #555;
+    }
+    
+    /* CTA BUTTON */
+    .cta {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 14px;
+      border: 1px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+    .cta:hover {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    /* SECTIONS & GRID */
+    .section {
+      max-width: 1024px;
+      margin: 64px auto;
+      padding: 0 24px;
+    }
+    
+    .section h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    /* Decorative underline for headers */
+    .section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 16px auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px; /* Generous spacing */
+    }
+
+    /* PRODUCT CARDS */
+    .card {
+      background: var(--white);
+      border: 1px solid #EAEAEA;
+      padding: 32px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    /* INGREDIENT PILLS - Simplified/Refined */
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 12px;
+      margin: 4px;
+    }
+
+    /* BUNDLE SPECIFIC */
+    .bundle {
+      background: #FDFBF7; /* Very subtle warm white */
+      border: 1px solid var(--accent);
+      text-align: center;
+      padding: 40px;
+    }
+    .bundle-list {
+      list-style: none;
+      margin: 20px 0;
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      font-size: 18px;
+    }
+    .bundle-list li { padding: 4px 0; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding: 40px 24px;
+      background: var(--white);
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+    footer p {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    /* UTILITY */
+    .text-center { text-align: center; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <div class="logo">THEMYSCIRA LIPCARE</div>
+  </div>
+  <nav>
+    <a href="#rituals">The Rituals</a>
+    <a href="#bundle">Sets</a>
+    <a href="#philosophy">Philosophy</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Ritual lipcare crafted for<br>divine feminine power</h1>
+  <p>Thoughtfully formulated lip rituals inspired by Amazonian strength — designed to nourish, protect, and elevate your natural beauty with intention.</p>
+  <a href="#rituals" class="cta">Explore The Amazonian Ritual</a>
+</section>
+
+<section id="rituals" class="section">
+  <h2>The Collection</h2>
+  <div class="grid">
+    
+    <div class="card">
+      <h3>Artemis Mauve</h3>
+      <p>A high-shine, non-sticky gloss with a refined mauve tint that enhances the natural tone of your lips. Designed for softness, comfort, and subtle radiance.</p>
+      <div class="pill">Lip Gloss</div>
+    </div>
+
+    <div class="card">
+      <h3>Hippolyta Brown</h3>
+      <p>A rich, warm brown gloss with depth and elegance. Smooth, moisturizing, and designed to complement every complexion with quiet confidence.</p>
+      <div class="pill">Lip Gloss</div>
+    </div>
+
+    <div class="card">
+      <h3>Selene Balm</h3>
+      <p>A deeply hydrating lip balm formulated to soothe, protect, and restore dry lips. Ideal for daily wear or overnight repair.</p>
+      <div class="pill">Nourishing Balm</div>
+    </div>
+
+    <div class="card">
+      <h3>Eos Glow Scrub</h3>
+      <p>A gentle sugar-based exfoliator that buffs away dryness and reveals softer, smoother lips — preparing them for balm or gloss rituals.</p>
+      <div class="pill">Exfoliator</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="bundle" class="section">
+  <h2>The Amazonian Lip Ritual Set</h2>
+  <div class="card bundle">
+    <p>A complete lipcare ritual designed for daily nourishment and effortless elegance.</p>
+    <ul class="bundle-list">
+      <li>Artemis Mauve Lip Gloss</li>
+      <li>Hippolyta Brown Lip Gloss</li>
+      <li>Selene Balm</li>
+      <li>Eos Glow Scrub</li>
+      <li>Themyscira Mini Cosmetic Pouch</li>
+    </ul>
+    <br>
+    <a href="#contact" class="cta">Order Set</a>
+  </div>
+</section>
+
+<section id="philosophy" class="section text-center">
+  <h2>Ingredient Positioning</h2>
+  <p style="max-width: 700px; margin: auto;">
+    Skin-loving oils and butters. Thoughtfully selected pigments. Gentle fragrances. 
+    <br><br>
+    <strong>Paraben-free • Cruelty-free</strong>
+  </p>
+</section>
+
+<section id="contact" class="section text-center">
+  <h2>Acquire</h2>
+  <p>DM on Instagram: <strong>@themyscira.lipcare</strong></p>
+  <p>WhatsApp: <strong>+234 _________</strong></p>
+</section>
+
+<footer>
+  <p>© Themyscira Lipcare<br>Crafted with intention.</p>
+</footer>
+
+</body>
+</html>
